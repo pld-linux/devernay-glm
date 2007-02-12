@@ -1,5 +1,5 @@
 Summary:	glm - Alias Wavefront OBJ File Reader/Viewer Library
-Summary(pl):	glm - biblioteka do odczytu i przegl±dania plikÛw OBJ Alias Wavefront
+Summary(pl.UTF-8):   glm - biblioteka do odczytu i przeglƒÖdania plik√≥w OBJ Alias Wavefront
 Name:		glm
 Version:	0.3
 Release:	0.1
@@ -15,45 +15,45 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 glm is an Alias Wavefront OBJ File Reader/Viewer Library.
 
-%description -l pl
-glm to biblioteka do odczytu i przegl±dania plikÛw OBJ Alias
+%description -l pl.UTF-8
+glm to biblioteka do odczytu i przeglƒÖdania plik√≥w OBJ Alias
 Wavefront.
 
 %package devel
 Summary:	Header file for glm library
-Summary(pl):	Plik nag≥Ûwkowy biblioteki glm
+Summary(pl.UTF-8):   Plik nag≈Ç√≥wkowy biblioteki glm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header file for glm library.
 
-%description devel -l pl
-Plik nag≥Ûwkowy biblioteki glm.
+%description devel -l pl.UTF-8
+Plik nag≈Ç√≥wkowy biblioteki glm.
 
 %package static
 Summary:	Static glm library
-Summary(pl):	Statyczna biblioteka glm
+Summary(pl.UTF-8):   Statyczna biblioteka glm
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static glm library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka glm.
 
 %package examples
 Summary:	glm examples
-Summary(pl):	Przyk≥ady do glm
+Summary(pl.UTF-8):   Przyk≈Çady do glm
 Group:		Development/Libraries
 #Requires:	%{name} = %{version}-%{release}
 
 %description examples
 This is the package containing the examples, both binary and source.
 
-%description examples -l pl
-Ten pakiet zawiera przyk≥ady w postaci ºrÛde≥ i binariÛw.
+%description examples -l pl.UTF-8
+Ten pakiet zawiera przyk≈Çady w postaci ≈∫r√≥de≈Ç i binari√≥w.
 
 %prep
 %setup -q
