@@ -1,5 +1,5 @@
 Summary:	glm - Alias Wavefront OBJ File Reader/Viewer Library
-Summary(pl.UTF-8):   glm - biblioteka do odczytu i przeglądania plików OBJ Alias Wavefront
+Summary(pl.UTF-8):	glm - biblioteka do odczytu i przeglądania plików OBJ Alias Wavefront
 Name:		glm
 Version:	0.3
 Release:	0.1
@@ -21,7 +21,7 @@ Wavefront.
 
 %package devel
 Summary:	Header file for glm library
-Summary(pl.UTF-8):   Plik nagłówkowy biblioteki glm
+Summary(pl.UTF-8):	Plik nagłówkowy biblioteki glm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -33,7 +33,7 @@ Plik nagłówkowy biblioteki glm.
 
 %package static
 Summary:	Static glm library
-Summary(pl.UTF-8):   Statyczna biblioteka glm
+Summary(pl.UTF-8):	Statyczna biblioteka glm
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -45,7 +45,7 @@ Statyczna biblioteka glm.
 
 %package examples
 Summary:	glm examples
-Summary(pl.UTF-8):   Przykłady do glm
+Summary(pl.UTF-8):	Przykłady do glm
 Group:		Development/Libraries
 #Requires:	%{name} = %{version}-%{release}
 
