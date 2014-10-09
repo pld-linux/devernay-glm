@@ -1,14 +1,15 @@
 Summary:	glm - Alias Wavefront OBJ File Reader/Viewer Library
 Summary(pl.UTF-8):	glm - biblioteka do odczytu i przeglądania plików OBJ Alias Wavefront
 Name:		glm
-Version:	0.3
-Release:	0.1
+Version:	0.3.2
+Release:	1
 License:	GPL v2
 Group:		Libraries
 Source0:	http://devernay.free.fr/hacks/glm/%{name}-%{version}.tar.gz
-# Source0-md5:	f154f0d6c3316b31ad8e8b5ced7dd5c9
-#Patch0: %{name}-DESTDIR.patch
+# Source0-md5:	63836fce687ac5ed2108d7bc889db71f
+Patch0:		%{name}-build.patch
 URL:		http://devernay.free.fr/hacks/glm/
+BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -57,9 +58,12 @@ Ten pakiet zawiera przykłady w postaci źródeł i binariów.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-cp -f /usr/share/automake/config.sub .
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure \
 	--enable-shared \
 	--enable-static
@@ -74,10 +78,10 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 install -d $RPM_BUILD_ROOT%{_bindir}
 
 # gluiobj don't work
-install examples/glutobj $RPM_BUILD_ROOT%{_bindir}
-install examples/smooth  $RPM_BUILD_ROOT%{_bindir}
+cp -p examples/glutobj $RPM_BUILD_ROOT%{_bindir}
+cp -p examples/smooth  $RPM_BUILD_ROOT%{_bindir}
 # game_glutobj seems same as glutobj
-install examples/*.c examples/*.cpp examples/*.h examples/Makefile* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -p examples/*.c examples/*.cpp examples/*.h examples/Makefile* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -101,4 +105,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files examples
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/glutobj
+%attr(755,root,root) %{_bindir}/smooth
 %{_examplesdir}/%{name}-%{version}
