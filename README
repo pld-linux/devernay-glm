@@ -1,0 +1,4 @@
+This used to be 'glm' package, which was never built (no 'auto' tags) nor
+required by any other spec.
+
+Renamed as it conflicted with http://glm.g-truc.net/0.9.7/index.html
