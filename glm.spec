@@ -58,7 +58,7 @@ Ten pakiet zawiera przykłady w postaci źródeł i binariów.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__aclocal}
